@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Plot from 'react-plotly.js';
+import Plotly from 'react-native-plotly';
 import { StyleSheet, View, Text, ActivityIndicator } from 'react-native';
 import { fetchOverallAnalysisHeatmapData } from '../apis/common_apis/common_apis';
 
@@ -47,7 +47,7 @@ const OverallAnalysisHeatMap = () => {
                 <>
                     <Text style={styles.title}>No. of Events over time (Every Sport)</Text>
                     {heatmapData && (
-                        <Plot
+                        <Plotly
                             data={[transformHeatmapData(heatmapData)]}
                             layout={{
                                 title: 'Overall Sport Performance',

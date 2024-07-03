@@ -12,10 +12,10 @@ import { DrawerItemList } from '@react-navigation/drawer';
 import auth from '@react-native-firebase/auth';
 // COMPONENTS IMPORT 
 import MedalTallyTable from './MedalTallyTable';
-import SingleLineGraph from './singleLineGraph';
-import CountrywiseAnalysis from './countrywiseAnalysis';
-import AthleteWiseAnalysis from './athletsWiseAnalysis';
-import OverallAnalysisHeatMap from './overAllAnalysisHeatMap';
+// import SingleLineGraph from './singleLineGraph';
+// import CountrywiseAnalysis from './countrywiseAnalysis';
+// import AthleteWiseAnalysis from './athletsWiseAnalysis';
+// import OverallAnalysisHeatMap from './overAllAnalysisHeatMap';
 
 const CustomDrawerContent = (props) => {
   const handleLogout = () => {
@@ -58,7 +58,7 @@ const MyDrawer = () => {
         <LinkStyle to="/athletsanalysis" ><Module2IconWeb  width={40} height={40} />Athlets Analysis</LinkStyle>
 
       </Sidebar>
-      <Content>
+      {/* <Content>
 
         <Routes>
           <Route exact path='/' element={<MedalTallyTable />} />
@@ -68,16 +68,16 @@ const MyDrawer = () => {
           <Route path='/overallanalysisheatmap' Component={OverallAnalysisHeatMap} />
      </Routes>
 
-      </Content>
+      </Content> */}
     </BrowserRouter>
   ) : (
     
   
         <Drawer.Navigator initialRouteName="Menu" drawerContent={(props) => <CustomDrawerContent {...props} />}>
-//        <Drawer.Screen name="Medal Tally" children={() => <MedalTallyTable/>} options={{
-//            drawerIcon: ({size, color}) => (
-//            <MedalTallyIconAndroid name="medal" size={25} color={color} />
-//            )
+        <Drawer.Screen name="Medal Tally" children={() => <MedalTallyTable/>} options={{
+            drawerIcon: ({size, color}) => (
+            <MedalTallyIconAndroid name="medal" size={25} color={color} />
+            )
         }}
         />
     
